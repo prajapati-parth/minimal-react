@@ -28,4 +28,5 @@ npm run build
 ```html
 <script src="./output/bundle.min.js" type="text/javascript"></script>
 ```
-
+### Size
+Production build: `98 kb`

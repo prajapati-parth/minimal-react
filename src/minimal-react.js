@@ -42,7 +42,7 @@ if (typeof projectName === 'undefined') {
 
 createBoilerplate(projectName);
 
-async function createBoilerplate(name) {
+function createBoilerplate(name) {
   const rootDir = path.resolve(name);
   const appName = path.basename(rootDir);
 
