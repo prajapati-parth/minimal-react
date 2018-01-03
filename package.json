@@ -1,0 +1,22 @@
+{
+  "name": "minimal-react",
+  "version": "1.0.0",
+  "description": "A command-line tool to get started with minimal react boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react"
+  ],
+  "bin": {
+    "minimal-react": "./src/minimal-react.js"
+  },
+  "author": "parth17prajapati@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "commander": "^2.12.2",
+    "fs-extra": "^5.0.0"
+  }
+}
