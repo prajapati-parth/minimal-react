@@ -3,16 +3,19 @@
   "version": "1.0.0",
   "description": "A command-line tool to get started with minimal react boilerplate",
   "main": "./src/minimal-react.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prajapati-parth/minimal-react"
   },
   "keywords": [
-    "react"
+    "react",
+    "boilerplate",
+    "minimal"
   ],
   "bin": {
     "minimal-react": "./src/minimal-react.js"
   },
-  "author": "parth17prajapati@gmail.com",
+  "author": "ParthPrajapati",
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.3.0",
