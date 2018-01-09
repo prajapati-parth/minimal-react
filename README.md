@@ -30,3 +30,14 @@ npm run build
 ```
 ### Size
 Production build: `98 kb`
+
+## Release notes
+### v1.0.3 - Added project-name validation checks
+- `project-name` should now follow NPM naming convention
+- `project-name` should not be same as an existing directory at that location
+### v1.0.2 - Added README
+- Added README file for npmjs.com
+### v1.0.1 - Minor bug fix
+- Fixed async function related minor bug
+### v1.0.0 - Initial release
+- Use `minimal-react my-simple-react-example` to create a minimal react application.
