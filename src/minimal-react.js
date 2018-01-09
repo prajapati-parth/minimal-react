@@ -6,6 +6,7 @@ const path = require('path');
 const fs = require('fs');
 const fsExtra = require('fs-extra');
 const { exec } = require('child_process');
+const validateProjectName = require('validate-npm-package-name');
 
 const packageJson = require('../package.json');
 
@@ -28,6 +29,7 @@ const program = new commander.Command(packageJson.name)
   })
   .parse(process.argv);
 
+// if project name is not specified
 if (typeof projectName === 'undefined') {
   console.log();
   console.log('Please specify project directory:');
@@ -39,6 +41,17 @@ if (typeof projectName === 'undefined') {
   console.log(`Run ${chalk.blue(`${program.name()} --help`)} to see all options`);
   process.exit(1);
 }
+
+// check if directory with specified projectName exists
+if(checkIfDirExists(projectName)) {
+  console.log();
+  console.log(`${chalk.red('ERROR:')} Directory '${projectName}' already exists.`);
+  console.log('Please try again with some other name.');
+  process.exit(1);
+}
+
+// check for valid npm naming conventions
+checkForValidName(projectName);
 
 createBoilerplate(projectName);
 
@@ -144,4 +157,29 @@ function logFinalMessage(appName) {
   console.log();
   console.log(`  ${chalk.cyan('cd')} ${appName}`);
   console.log(`  ${chalk.cyan('npm run dev')}`);
+}
+
+function checkIfDirExists(dirName) {
+  const projectPath = path.resolve(dirName);
+  return fs.existsSync(projectPath);
+}
+
+function checkForValidName(name) {
+  const validationResult = validateProjectName(name);
+
+  if (!validationResult.validForNewPackages) {
+    console.log();
+    console.log(`Could not create a project with name ${chalk.red(name)} due to npm naming conventions.`);
+    printValidationResults(validationResult.errors);
+    printValidationResults(validationResult.warnings);
+    process.exit(1);
+  }
+}
+
+function printValidationResults(errors) {
+  if (typeof errors !== 'undefined') {
+    errors.forEach(error => {
+      console.log(`  *  ${error}`);
+    })
+  }
 }

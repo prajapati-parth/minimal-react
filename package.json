@@ -1,6 +1,6 @@
 {
   "name": "minimal-react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A command-line tool to get started with minimal react boilerplate",
   "main": "./src/minimal-react.js",
   "repository": {
@@ -20,6 +20,7 @@
   "dependencies": {
     "chalk": "^2.3.0",
     "commander": "^2.12.2",
-    "fs-extra": "^5.0.0"
+    "fs-extra": "^5.0.0",
+    "validate-npm-package-name": "^3.0.0"
   }
 }
