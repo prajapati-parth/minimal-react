@@ -1,6 +1,11 @@
 # Minimal React
 A command line tool to create a minimal react web application.
 
+Minimal React is a tool just like Create React App but just simpler and with more control over your package.json and webpack configuration files.
+- It is a boilerplate to create a simple React application setup.
+- It is quick and smaller in size compared to Create React App.
+- It is a starter kit that builds you a minimal React app with bare minimum configuration that just works.
+
 ## Usage
 - Install `minimal-react`
 ```shell
@@ -32,6 +37,7 @@ npm run build
 Production build: `98 kb`
 
 ## Release notes
+### v1.0.4 - Updated README to include SEO friendly keywords
 ### v1.0.3 - Added project-name validation checks
 - `project-name` should now follow NPM naming convention
 - `project-name` should not be same as an existing directory at that location
