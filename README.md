@@ -1,4 +1,6 @@
 # Minimal React
+[![npm version](https://badge.fury.io/js/minimal-react.svg)](https://badge.fury.io/js/minimal-react)  
+  
 A command line tool to create a minimal react web application.
 
 Minimal React is a tool just like Create React App but just simpler and with more control over your package.json and webpack configuration files.
