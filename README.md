@@ -8,6 +8,8 @@ Minimal React is a tool just like Create React App but just simpler and with mor
 - It is quick and smaller in size compared to Create React App.
 - It is a starter kit that builds you a minimal React app with bare minimum configuration that just works.
 
+Did Minimal React help you create your project? Consider buying me a coffee!<br/><a href="https://www.buymeacoffee.com/kTI9b0xj1" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+
 ## Usage
 - Install `minimal-react`
 ```shell
