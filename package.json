@@ -5,7 +5,7 @@
   "main": "./src/minimal-react.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/prajapati-parth/minimal-react"
+    "url": "git://github.com/prajapati-parth/minimal-react.git"
   },
   "keywords": [
     "react",
@@ -24,5 +24,8 @@
     "commander": "^2.12.2",
     "fs-extra": "^5.0.0",
     "validate-npm-package-name": "^3.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
